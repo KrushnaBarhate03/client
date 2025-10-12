@@ -13,7 +13,7 @@ function Homee() {
   // ];
 
   const loadstudents=async()=>{
-    const response= await axios.get("http://localhost:5001/students");
+    const response= await axios.get("https://one17interacting-with-api-and-its-method.onrender.com/students");
     setStudents(response.data.data);
 
  

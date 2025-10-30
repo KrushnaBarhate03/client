@@ -13,7 +13,7 @@ function Homee() {
   // ];
 
   const loadstudents=async()=>{
-    const response= await axios.get("https://one17interacting-with-api-and-its-method.onrender.com/students");
+    const response= await axios.get(`${import.meta.env.VITE_API_URL}/students`);
     setStudents(response.data.data);
 
  

@@ -13,7 +13,7 @@ function Add() {
 
   const addStudent=async()=>{
     try{
-const response= await axios.post("https://one17interacting-with-api-and-its-method.onrender.com/students",{
+const response= await axios.post(`${import.meta.env.VITE_API_URL}/students`,{
   id:student.id,
    name:student.name,
    age:student.age,
@@ -25,9 +25,11 @@ if(response.data.success){
   name:"",
   age:"",
  })
- toast.success(response.data.message);
+toast.success(response.data.message);
+
 }else{
-  toast.error(response.data.message);
+ toast.error(response.data.message);
+  
 }
 }catch(e){
  toast.error(e.response.data.message)

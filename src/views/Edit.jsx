@@ -14,7 +14,7 @@ function Edit() {
 
   const loadStudents = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/students/${userId}`);
+      const response = await axios.get("https://one17interacting-with-api-and-its-method.onrender.com/students/${userId}");
       setStudent(response.data.data);
     } catch (e) {
       toast.error(e.response?.data?.message || 'Failed to load student');
@@ -23,7 +23,7 @@ function Edit() {
 
   const EditStudent = async () => {
     try {
-      const response = await axios.put(`${import.meta.env.VITE_API_URL}/students/${student.id}`, {
+      const response = await axios.put("https://one17interacting-with-api-and-its-method.onrender.com/students/${student.id}", {
         name: student.name,
         age: student.age,
       });

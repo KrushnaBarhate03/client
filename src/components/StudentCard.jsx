@@ -6,7 +6,7 @@ import Edit from'./../assets/pen.png'
 import {Link} from 'react-router-dom'
 function StudentCard({id,name,age, loadstudents}) {
   const deletestudent=async()=>{
-   const response=await axios.delete(`${import.meta.env.VITE_API_URL}/students/${id}`)
+   const response=await axios.delete("https://one17interacting-with-api-and-its-method.onrender.com/students/${id}")
    if(response.data.success){
     toast.success(response.data.message);
     loadstudents();
